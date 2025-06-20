@@ -5,12 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Craft2D Systems</title>
 
-  <script>
-    if (location.protocol === 'http:') {
-      location.href = 'https://' + location.hostname + location.pathname + location.search;
-    }
-  </script>
-
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://github.com/user-attachments/assets/bb918b73-440f-4790-b597-a4e7f5ca3289" />
 
@@ -33,18 +27,19 @@
       padding: 0;
       height: 100%;
       overflow: hidden;
-    }
-    body {
-      font-family: system-ui, sans-serif;
       background-color: #121212;
       color: #fff;
+      font-family: system-ui, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
     }
-    .container {
+    body {
       text-align: center;
+    }
+    .container {
       padding: 2rem;
+      max-width: 700px;
     }
     img.logo {
       width: 64px;
@@ -58,7 +53,7 @@
     p {
       font-size: 1.1rem;
       max-width: 600px;
-      margin-bottom: 2rem;
+      margin: 0 auto 2rem;
     }
     a.button {
       display: inline-block;
@@ -69,11 +64,53 @@
       border-radius: 8px;
       font-weight: bold;
       transition: background-color 0.2s;
+      margin-bottom: 3rem;
     }
     a.button:hover {
       background-color: #0f75d4;
     }
+    /* Team section */
+    .team {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+    .member {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 120px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .member img {
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      margin-bottom: 0.5rem;
+      border: 2px solid #1e90ff;
+      transition: transform 0.2s;
+    }
+    .member img:hover {
+      transform: scale(1.1);
+    }
+    .member-name {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      color: #1e90ff;
+    }
+    .member-role {
+      font-size: 0.9rem;
+      color: #bbb;
+    }
   </style>
+
+  <script>
+    if (location.protocol === 'http:') {
+      location.href = 'https://' + location.hostname + location.pathname + location.search;
+    }
+  </script>
 </head>
 <body>
   <div class="container">
@@ -81,6 +118,24 @@
     <h1>Craft2D Systems</h1>
     <p>We build the Craft2D engine and game — a custom 2D platform designed for performance, control, and creativity. Fully open, fully ours.</p>
     <a href="https://github.com/wheatbread2056/craft2d" class="button">View Project</a>
+
+    <section class="team">
+      <a href="https://github.com/anshnk" target="_blank" class="member" rel="noopener noreferrer">
+        <img src="https://github.com/anshnk.png" alt="Ansh" />
+        <div class="member-name">anshnk</div>
+        <div class="member-role">CEO | Lead Developer</div>
+      </a>
+      <a href="https://github.com/wheatbread2056" target="_blank" class="member" rel="noopener noreferrer">
+        <img src="https://github.com/wheatbread2056.png" alt="Wheatbread2056" />
+        <div class="member-name">Wheatbread2056</div>
+        <div class="member-role">Founder | Main Developer</div>
+      </a>
+      <a href="https://github.com/zkrxps" target="_blank" class="member" rel="noopener noreferrer">
+        <img src="https://github.com/zkrxps.png" alt="Spark" />
+        <div class="member-name">Spark</div>
+        <div class="member-role">Marketing | Main Developer</div>
+      </a>
+    </section>
   </div>
 </body>
 </html>
