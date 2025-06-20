@@ -26,13 +26,28 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      overflow: hidden;
+      overflow: hidden; /* disable scrolling by default */
       background-color: #121212;
       color: #fff;
       font-family: system-ui, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+    @media (max-width: 768px) {
+      html, body {
+        overflow: auto;
+        height: auto;
+        display: block;
+        
+        /* Hide scrollbar for WebKit browsers */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;  /* IE 10+ */
+      }
+      html::-webkit-scrollbar,
+      body::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
+      }
     }
     body {
       text-align: center;
@@ -131,8 +146,8 @@
         <div class="member-role">Founder | Main Developer</div>
       </a>
       <a href="https://github.com/zkrxps" target="_blank" class="member" rel="noopener noreferrer">
-        <img src="https://github.com/zkrxps.png" alt="Spark" />
-        <div class="member-name">Spark</div>
+        <img src="https://github.com/zkrxps.png" alt="zkrxps" />
+        <div class="member-name">zkrxps</div>
         <div class="member-role">Marketing | Main Developer</div>
       </a>
     </section>
